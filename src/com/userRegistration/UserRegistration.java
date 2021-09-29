@@ -16,7 +16,9 @@ public class UserRegistration {
 	// //Rule1
 	// private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$";
 	// //Rule2
-	private static final String PASSWORD_REGEX = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}+$"; // Rule3
+	// private static final String PASSWORD_REGEX =
+	// "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}+$"; //Rule3
+	private static final String PASSWORD_REGEX = "^(?=.*[A-Z])(?=.*[0-9])(?=.+[!@#$%^&+=._-])[A-Za-z0-9].{8,}+$"; // Rule4
 	/*
 	 * Validating First Name.
 	 */
