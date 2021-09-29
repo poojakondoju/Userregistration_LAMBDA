@@ -12,11 +12,13 @@ public class UserRegistration {
 	public static final String NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}+$"; // using Regex
 	public static final String EMAIL_REGEX = "^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$";
 	public static final String MOBILE_REGEX = "^[0-9]{2}[ ]{1}[0-9]{10}+$";
-	private static final String PASSWORD_REGEX = "^[A-Za-z0-9]{8,}+$";
-
+	// private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$";
+	// //Rule1
+	private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$"; // Rule2
 	/*
 	 * Validating First Name.
 	 */
+
 	public void firstName() {
 		System.out.println("Enter First Name");
 		String name = scanner.next();
@@ -91,5 +93,6 @@ public class UserRegistration {
 		registration.LastName();
 		registration.email();
 		registration.mobileNumber();
+		registration.password();
 	}
 }
