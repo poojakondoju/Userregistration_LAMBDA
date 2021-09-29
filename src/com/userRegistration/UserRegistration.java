@@ -11,7 +11,8 @@ public class UserRegistration {
 	// Global variables.
 	public static final String NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}+$"; // using Regex
 	public static final String EMAIL_REGEX = "^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$";
-	public static final String MOBILE_REGEX = "[0-9]{2}[ ]{1}[0-9]{10}+$";
+	public static final String MOBILE_REGEX = "^[0-9]{2}[ ]{1}[0-9]{10}+$";
+	private static final String PASSWORD_REGEX = "^[A-Za-z0-9]{8,}+$";
 
 	/*
 	 * Validating First Name.
@@ -63,6 +64,19 @@ public class UserRegistration {
 			System.out.println("Valid Mobile number");
 		else
 			System.out.println("In Valid Mobile Number");
+	}
+
+	/*
+	 * Validating Password Rule1:It contain Minimum 8 characters.
+	 */
+	public void password() {
+		System.out.println("Enter Password");
+		String password = scanner.next();
+		// Comparing the number with MOBILE_REGEX
+		if (password.matches(PASSWORD_REGEX))
+			System.out.println("Valid password");
+		else
+			System.out.println("In Valid password");
 	}
 
 	/*
