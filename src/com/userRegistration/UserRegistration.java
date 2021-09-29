@@ -50,13 +50,19 @@ public class UserRegistration {
 	 * Validating Email.
 	 */
 	public void email() {
-		System.out.println("Enter email");
-		String email = scanner.next();
-		// Comparing the email with EMAIL_REGEX
-		if (email.matches(EMAIL_REGEX))
-			System.out.println("Valid Email");
-		else
-			System.out.println("In Valid Email");
+		char check;
+		do {
+			System.out.println("Enter email");
+			String email = scanner.next();
+			// Comparing the email with EMAIL_REGEX
+			if (email.matches(EMAIL_REGEX))
+				System.out.println("Valid Email");
+			else
+				System.out.println("In Valid Email");
+
+			System.out.println("Check another email (y/n)");
+			check = scanner.next().charAt(0);
+		} while (check == 'y');
 	}
 
 	/*
@@ -78,7 +84,7 @@ public class UserRegistration {
 	public void password() {
 		System.out.println("Enter Password");
 		String password = scanner.next();
-		// Comparing the number with MOBILE_REGEX
+		// Comparing the number with PASSWORD_REGEX
 		if (password.matches(PASSWORD_REGEX))
 			System.out.println("Valid password");
 		else
