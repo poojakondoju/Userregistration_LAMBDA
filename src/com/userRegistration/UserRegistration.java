@@ -14,7 +14,9 @@ public class UserRegistration {
 	public static final String MOBILE_REGEX = "^[0-9]{2}[ ]{1}[0-9]{10}+$";
 	// private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$";
 	// //Rule1
-	private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$"; // Rule2
+	// private static final String PASSWORD_REGEX = "^(?=.*[A-Z])[A-Za-z0-9]{8,}+$";
+	// //Rule2
+	private static final String PASSWORD_REGEX = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}+$"; // Rule3
 	/*
 	 * Validating First Name.
 	 */
