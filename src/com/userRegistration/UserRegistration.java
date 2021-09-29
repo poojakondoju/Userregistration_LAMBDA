@@ -11,6 +11,7 @@ public class UserRegistration {
 	// Global variables.
 	public static final String NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}+$"; // using Regex
 	public static final String EMAIL_REGEX = "^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$";
+	public static final String MOBILE_REGEX = "[0-9]{2}[ ]{1}[0-9]{10}+$";
 
 	/*
 	 * Validating First Name.
@@ -44,11 +45,24 @@ public class UserRegistration {
 	public void email() {
 		System.out.println("Enter email");
 		String email = scanner.next();
-		// Comparing the name with email
+		// Comparing the email with EMAIL_REGEX
 		if (email.matches(EMAIL_REGEX))
 			System.out.println("Valid Email");
 		else
 			System.out.println("In Valid Email");
+	}
+
+	/*
+	 * Validating Mobile number.
+	 */
+	public void mobileNumber() {
+		System.out.println("Enter Mobile number");
+		String number = scanner.next();
+		// Comparing the number with MOBILE_REGEX
+		if (number.matches(MOBILE_REGEX))
+			System.out.println("Valid Mobile number");
+		else
+			System.out.println("In Valid Mobile Number");
 	}
 
 	/*
@@ -62,5 +76,6 @@ public class UserRegistration {
 		registration.firstName();
 		registration.LastName();
 		registration.email();
+		registration.mobileNumber();
 	}
 }
